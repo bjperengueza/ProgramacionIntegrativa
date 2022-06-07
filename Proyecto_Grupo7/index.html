@@ -4,9 +4,303 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Grupo7</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="modulo.js" defer></script>
+    <script src="catalogo.js" defer></script>
+    <script src="view.js" defer></script>
+  
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <title>Proyecto Grupo 7</title>
 </head>
 <body>
+
+    <script src="moda.js" type="module"></script>
+    <header>
+    <section>
+        <img src="img/logo.png" alt="logo" srcset="" width="98px" height="80px">
+        <label for="toggle-1" class="toggle-menu"></label>
+        <input type="checkbox" id="toggle-1">
+
+    <nav>
+        <ul>
+            <li><a href="#inicio"><i class="fas fa-home" style="color: rgb(255, 255, 255);"></i>Inicio</a></li>
+            <li><a href="#quienes-somos"><i class="fas fa-users" style="color: rgb(255, 255, 255);"></i>Quiénes Somos</a></li>
+            <li><a href="#catalogo"><i class="fas fa-images" style="color: rgb(255, 255, 255);"></i>Catálogo</a></li>
+            <li><a href="#contactanos"><i class="fas fa-phone" style="color: rgb(255, 255, 255);"></i>Contáctanos</a></li>
+        </ul>
+      </nav>
+  </header>
+</section>
+
+
+<section id="catalogo" class="content">
+    <h2><b>Catálogo</b></h2>
+    <p> CATÁLOGO DE ROPA - CATÁLOGO DE MODA</p>
+    <div>
+      <button class="btn1" id="boton3"  type="button" onclick=" mostrar();">Play Station</button>
+      <button class="btn2" id="boton3"  type="button" onclick=" mostrar1();">Xbox</button>
+      <button class="btn3" id="boton3"  type="button" onclick=" mostrar2();">Nintendo</button>
+    </div>
+    
+
+    <template id="card-template">
+      <style>
+        .card {
+          display: flex;
+          font-family: Arial;
+          background: #992d12;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          width: 300px;
+          height: 150px;
+          margin: 20px 10px;
+          padding-right: 20px;
+          border-radius: 4px;
+          overflow: hidden;
+        }
+
+        .picture {
+          margin-right: 20px;
+        }
+
+        h1 {
+          font-size: 24px;
+          color: #34495e;
+          margin: 20px 0 10px;
+        }
+
+        p {
+          color: #2c3e50;
+          margin: 0;
+          font-size: 12px;
+        }
+
+        /* Afecta la imagen por defecto que está definida en el Web Component */
+        img {
+          width: 100%;
+          height: 150px;
+          object-fit: cover;
+         
+        }
+      </style>
+
+       <div class="picture">
+          <slot name="image">
+            <img src="https://cdn.shopify.com/s/files/1/0421/6661/6214/products/IMG_8486-WEB_540x.jpg?v=1638294936" />
+          </slot>
+        </div>
+    </template>
+
+    <div class="card-list">
+
+      <!-- CATALOGO PLAY STATION -->
+
+      <beauty-card id="img1" style="display: none;">
+        <span slot="image">
+          <a> <img
+            src="https://as01.epimg.net/meristation/imagenes/2015/06/03/noticia/1433346420_798969_1532451998_portada_normal.jpg" /></a>
+          <div class="caja" >
+            <img src="https://as01.epimg.net/meristation/imagenes/2015/06/03/noticia/1433346420_798969_1532451998_portada_normal.jpg" /> 
+              <p><b><i>UNCHARTED</i></b> </p>
+          </div>
+        </span>
+      </beauty-card>
+
+      <beauty-card id="img2" style="display: none;">
+        <span slot="image">
+          <a><img
+            src="https://i.blogs.es/24080b/destiny-ps4/450_1000.jpg" /></a>
+            <div class="caja" >
+              <img src="https://i.blogs.es/24080b/destiny-ps4/450_1000.jpg" /> 
+                <p><b><i>DESTINY</i></b> </p>
+            </div>
+          </span>
+      </beauty-card>
+
+      <beauty-card id="img3" style="display: none;">
+        <span slot="image">
+          <a> <img
+            src="https://juegodigitalecuador.com/files/images/thumbs/productos_300x400_1645052268-1643245071-wwe-2k22-ps4-pre-orden.jpg" /></a>
+            <div class="caja" >
+              <img src="https://juegodigitalecuador.com/files/images/thumbs/productos_300x400_1645052268-1643245071-wwe-2k22-ps4-pre-orden.jpg" /> 
+                <p><b><i>MASS EFECT</i></b> </p>
+            </div>
+        </span>
+      </beauty-card>
+
+      <beauty-card id="img4" style="display: none;">
+        <span slot="image">
+          <a><img src="http://d3ugyf2ht6aenh.cloudfront.net/stores/001/067/161/products/days-gone-cover-web1-cc75846783fcd5ea7415778189461652-640-0.png" /></a>
+          <div class="caja" >
+            <img src="http://d3ugyf2ht6aenh.cloudfront.net/stores/001/067/161/products/days-gone-cover-web1-cc75846783fcd5ea7415778189461652-640-0.png" /> 
+              <p><b><i>DAYS GONE</i></b> </p>
+          </div>
+        </span>
+      </beauty-card>
+
+      <beauty-card id="img5" style="display: none;">
+        <span slot="image">
+        <a><img
+            src="https://uvejuegos.com/img/caratulas/54416/portada21146.jpeg" /></a>
+            <div class="caja" >
+              <img src="https://uvejuegos.com/img/caratulas/54416/portada21146.jpeg" /> 
+                <p><b><i>GOD OF WAR</i></b> </p>
+            </div>
+        </span>
+      </beauty-card>
+
+      <beauty-card id="img6" style="display: none;">
+        <span slot="image">
+        <a><img
+            src="https://cybergamesemanuel.com/wp-content/uploads/2020/04/Resident-evil-3-2.jpg" /></a>
+            <div class="caja" >
+              <img src="https://cybergamesemanuel.com/wp-content/uploads/2020/04/Resident-evil-3-2.jpg" /> 
+                <p><b><i>RESIDENT EVIL 3</i></b> </p>
+            </div>
+        </span>
+      </beauty-card>
+
+      <!-- CATALOGO XBOX -->
+
+      <beauty-card id="img7" style="display: none;">
+        <span slot="image">
+         <a> <img
+            src="https://cl.buscafs.com/www.levelup.com/public/uploads/images/653916_256x327.jpg" /></a>
+            <div class="caja" >
+              <img src="https://cl.buscafs.com/www.levelup.com/public/uploads/images/653916_256x327.jpg" /> 
+                <p><b><i>FAR CRY 6</i></b> </p>
+            </div>
+        </span>
+      </beauty-card>
+
+      <beauty-card id="img8" style="display: none;">
+        <span slot="image">
+          <a><img
+            src="https://assets-prd.ignimgs.com/2020/09/22/halo-infinite-physical-1600779796872.jpg" /></a>
+            <div class="caja" >
+              <img src="https://assets-prd.ignimgs.com/2020/09/22/halo-infinite-physical-1600779796872.jpg" /> 
+                <p><b><i>HALO INFINITE</i></b> </p>
+            </div>
+        </span>
+      </beauty-card>
+
+      <beauty-card id="img9" style="display: none;">
+        <span slot="image">
+          <a><img
+            src="https://media.vandal.net/m/23857/gears-of-war-4-201676102343_2.jpg" /></a>
+            <div class="caja" >
+              <img src="https://media.vandal.net/m/23857/gears-of-war-4-201676102343_2.jpg" /> 
+                <p><b><i>GEARS OF WAR 4</i></b> </p>
+            </div>
+        </span>
+      </beauty-card>
+
+      <beauty-card id="img10" style="display: none;">
+        <span slot="image">
+          <a><img src="https://maska.com.do/wp-content/uploads/2021/08/201.png" /></a>
+          <div class="caja" >
+            <img src="https://maska.com.do/wp-content/uploads/2021/08/201.png" /> 
+              <p><b><i>RED DEAD REDEMPTION 2</i></b> </p>
+          </div>
+        </span>
+      </beauty-card>
+
+      <beauty-card id="img11" style="display: none;">
+        <span slot="image">
+          <a><img
+            src="https://img.zonared.com/images/caratulas/6400/6490-th1.jpg" /></a>
+            <div class="caja" >
+              <img src="https://img.zonared.com/images/caratulas/6400/6490-th1.jpg" /> 
+                <p><b><i>FORZA HORIZON 4</i></b> </p>
+            </div>
+        </span>
+      </beauty-card>
+
+      <beauty-card id="img12" style="display: none;">
+        <span slot="image">
+          <a><img
+            src="http://img1.ak.crunchyroll.com/i/spire3/624d3a7fed3f2a72907a1d5da984b0341497353687_full.jpg" /></a>
+            <div class="caja" >
+              <img src="http://img1.ak.crunchyroll.com/i/spire3/624d3a7fed3f2a72907a1d5da984b0341497353687_full.jpg" /> 
+                <p><b><i>MONSTER HUNTER WORLD</i></b> </p>
+            </div>
+        </span>
+      </beauty-card>
+      
+      <!-- CATALOGO NINTENDO -->
+
+      <beauty-card id="img13" style="display: none;">
+        <span slot="image">
+          <a><img
+           src="https://uvejuegos.com/img/caratulas/57909/super-mario-odyssey-eeuu.jpg" /></a>
+            <div class="caja" >
+                <img src="https://uvejuegos.com/img/caratulas/57909/super-mario-odyssey-eeuu.jpg" /> 
+                  <p><b><i>SUPER MARIO ODISSEY</i></b> </p>
+              </div>
+        </span>
+      </beauty-card>
+
+      <beauty-card id="img14" style="display: none;">
+        <span slot="image">
+        <a><img
+            src="https://uvejuegos.com/img/caratulas/59291/mariorabbids-kingdom-battle-eur.jpg" /></a>
+            <div class="caja" >
+                <img src="https://uvejuegos.com/img/caratulas/59291/mariorabbids-kingdom-battle-eur.jpg" /> 
+                  <p><b><i>MARIO + RABBITS</i></b> </p>
+              </div>
+        </span>
+      </beauty-card>
+
+      <beauty-card id="img15" style="display: none;">
+        <span slot="image">
+        <a> <img
+            src="https://uvejuegos.com/img/caratulas/56704/tloz-breath-of-the-wild-eur.jpg" /></a>
+            <div class="caja" >
+                <img src="https://uvejuegos.com/img/caratulas/56704/tloz-breath-of-the-wild-eur.jpg" /> 
+                  <p><b><i>ZELDA BREATH OF THE WILD</i></b> </p>
+              </div>
+        </span>
+      </beauty-card>
+
+      <beauty-card id="img16" style="display: none;">
+        <span slot="image">
+        <a> <img src="https://m.media-amazon.com/images/I/51A2ITCX3QL.jpg" /></a>
+          <div class="caja" >
+            <img src="https://m.media-amazon.com/images/I/51A2ITCX3QL.jpg" /> 
+              <p><b><i>ANIMAL CROSSING</i></b> </p>
+          </div>
+        </span>
+      </beauty-card>
+
+      <beauty-card id="img17" style="display: none;">
+        <span slot="image">
+        <a> <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuuoSI60hENBhN9raV_2bKz0X1DWFqc5xZ_I_Dc2X6_4S01Ovs-HTXli53pPbBjonp3mw&usqp=CAU" /></a>
+            <div class="caja" >
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuuoSI60hENBhN9raV_2bKz0X1DWFqc5xZ_I_Dc2X6_4S01Ovs-HTXli53pPbBjonp3mw&usqp=CAU" /> 
+                  <p><b><i>SUPER MARIO BROS U DELUXE</i></b> </p>
+              </div>
+        </span>
+      </beauty-card>
+
+      <beauty-card id="img18" style="display: none;">
+        <span slot="image">
+        <a><img
+            src="https://repacklab.com/wp-content/uploads/2020/11/Super-Mario-3D-World-PC-Download-With-Emulator-Repacklab-2.jpg" /></a>
+            <div class="caja" >
+                <img src="https://repacklab.com/wp-content/uploads/2020/11/Super-Mario-3D-World-PC-Download-With-Emulator-Repacklab-2.jpg" /> 
+                  <p><b><i>SUPER MARIO 3D WORLD</i></b> </p>
+              </div>
+        </span>
+      </beauty-card>
+
+    </div>
+  </section>
     
 </body>
 </html>
