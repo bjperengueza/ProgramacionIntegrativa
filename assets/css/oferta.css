@@ -1,0 +1,119 @@
+.contain{
+	width: 76%;
+	max-width: 85%;
+	margin-left: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: left;
+}
+.contain .items{
+    width: 250px;
+    height: 395px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    overflow: hidden;
+    margin: 20px;
+    transition: all 0.25s;
+    text-align: center;
+    border: 1px solid rgb(252, 235, 222);
+}
+
+.contain .items img{
+	border: 1px solid #fff;
+	cursor: pointer;
+    width: 250px;
+    height: 220px;
+}
+.contain .items i{
+    margin: 10px;
+    cursor: pointer;
+}
+.c-price{
+    border-top: 1px solid rgb(252, 235, 222);
+}
+.iconos i{
+    width: 35px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 10px;
+}
+.iconos i:hover{
+    background-color: rgb(252, 235, 222);
+}
+.ligthbox{
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	background: rgba(0,0,0,.8);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-close{
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 12px;
+	position: absolute;
+	top: 30px;
+	right: 90px;
+	cursor: pointer;
+}
+
+
+.category_list{
+	display: flex;
+	flex-direction: column;
+}
+
+.category_list .category_item{
+	display: block;
+	width: 200px;
+	padding: 15px 0;
+	margin-bottom: 20px;
+	margin-left: 45px;
+	background:rgb(252, 235, 222);
+	text-align: center;
+	text-decoration: none;
+	color: black;
+}
+
+.contain p{
+	width: 70%;
+	margin-left: 10%;
+	border-bottom: black 3px double;
+    text-align: center;
+}
+/*responsive*/
+
+@media only screen and (max-width: 1000px) {
+	
+	.contain .items{
+		margin-left: 70px;
+	}
+	aside p{
+		text-align: left;
+	}
+	.contain p{
+		width: 83%;
+		text-align: center;
+	}
+	.category_list{
+		display: flex;
+		align-content: flex-start;
+	}
+	.category_list .category_item{
+		width: 150px;
+		background:rgb(252, 235, 222);
+		text-align: center;
+		text-decoration: none;
+		color: black;
+		margin-left: -30px;
+	}
+  }
