@@ -1,0 +1,138 @@
+.contentnosotros h2{
+
+    color:bisque;
+    font-size:1.5rem;
+    font-family:cursive;
+}
+
+.contentnosotros {
+
+    color:bisque;
+    
+    font-family:cursive;
+}
+
+.caja-nosotros{
+	margin: -150px 0px 0px 0px;
+	box-shadow: 3px 3px 5px #999;
+	border-radius: 15px;
+	background: #1043cf;
+	color: #000000;
+    display: none;
+    position:absolute;
+    text-align: center;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
+.caja-nosotros p{
+    text-align: center;
+}
+
+.caja-nosotros img{
+    width: 110px;
+    height: 180px;
+}
+
+a:hover + div {
+    display: block;
+}
+.caja-nosotros:hover {
+	display: block;
+} 
+/* Afecta la imagen que se envió mediante el slot en el Web Component */
+nosotros-card img {
+    margin-top: 15px;
+    margin-inline-start: 20px;
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+
+.hobber img:hover{
+transform: scale(1.1);
+box-shadow:darkblue;
+}
+
+.lista-nosotros{
+    width: 50%;
+    float:right;
+    display:flex;
+   flex-wrap: wrap;
+    align-items:center;
+   padding: 20px;
+}
+
+.fila-lista{
+    margin-left: 50px;
+}
+
+.nosotros{
+    padding: 20px;
+    border-radius: 30px;
+    height:auto;
+    width: 900px;
+}
+
+.texto-nosotros{
+    background-color: rgba(210, 222, 234, 0.182);
+   float: left;
+   width: 40%;
+   padding: 20px 40px;
+   text-align: center;
+   border-radius: 25px;
+   margin-top: 30px;
+}
+
+.texto-nosotros p{
+    text-decoration: none;
+    color:rgb(250, 251, 255);
+    text-align:justify;
+}
+
+.contenedor-elemento{
+    display:flex;
+   flex-wrap: wrap;
+   width: 900px;
+   margin-top: 10px;
+   margin-bottom: 20px;
+}
+
+.logo-elemento{
+width: 70px;
+height: 70px;
+text-align: center;
+    
+margin-left: auto;
+margin-right: auto;
+}
+
+.elemento{
+    margin-top: 15px;
+    width: 300px;
+    padding: 15px 50px 0px 10px;
+}
+
+.elemento h2{
+    text-align: center;
+    color: #000000;
+}
+
+.elemento p{
+    color: #000000;
+    font-size: 12px;
+    text-align: justify;
+}
+
+
+.logo-elemento img{
+    width: 100%;
+
+}
+
+.sombra{
+    background-color:rgba(240, 248, 255, 0.812);
+    box-shadow: 6px 6px 10px 6px rgb(0, 0, 0);
+    margin-bottom: 30px;
+}
