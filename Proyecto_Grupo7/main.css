@@ -72,11 +72,11 @@ ul {
     background: none;
     outline: 0;
     color: rgb(0, 0, 0);
-    border-bottom: 1px solid #AAD841;
+    border-bottom: 1px solid #7b41d8;
 }
 
 .contact-form form button {
-    background: #AAD841;
+    background: #d841d0;
     border: 0;
     text-transform: uppercase;
     padding: 1em;
@@ -92,7 +92,7 @@ ul {
 
 /* CONTACT INFO */
 .contact-info {
-    background: #AAD841;
+    background: #ab41d8;
 }
 
 .contact-info h4, .contact-info ul, .contact-info p {
